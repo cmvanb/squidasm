@@ -18,3 +18,9 @@ use_parentheses = true
 [tool.pytest.ini_options]
 # ignore deprecation warnings coming from external packages using NetSquid (i.e. outside of SquidASM's control)
 filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.pyright]
+venv = "venv"
+executionEnvironments = [
+  { root = "./", extraPaths = [ "../netqasm" ], pythonVersion =  "3.8" }
+]
